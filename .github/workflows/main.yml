@@ -1,13 +1,13 @@
 on: [push]
 
-jobs: 
-    hello_world_job:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Hello World action step
-              id: hello
-              uses: hgirish/hello-world-action@v1.2
-              with:
-                    who-to-greet: 'Mona the Octocat'
-            - name: Get the output time
-              run: echo "The time was ${{ steps.hello.outputs.time }}"            
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello World action step
+        id: hello
+        uses: hgirish/hello-world-javascript-action@v1.2
+        with:
+          who-to-greet: "Mona the Octocat"
+      - name: Get the output time
+        run: echo "The time was ${{ steps.hello.outputs.time }}"
